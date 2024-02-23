@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { SingleProductViewComponent } from '../single-product-view/single-product-view.component';
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, RouterLink, RouterLinkActive],
+  imports: [CommonModule, HttpClientModule, RouterLink, RouterLinkActive, SingleProductViewComponent],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })

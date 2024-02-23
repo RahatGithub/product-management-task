@@ -1,8 +1,19 @@
-<ul>
+<!-- <ul>
     <li *ngFor="let product of data">
       <h3>{{ product.title }}</h3>
       <p>{{ product.description }}</p>
       <h5>Price: USD.{{ product.price }}</h5>
-      <a [routerLink] ="'/products/' + product.id" routerLinkActive="active" aria-current="page">View</a>
+      <a [routerLink] = "'/products/' + product.id" routerLinkActive="active" aria-current="page">View</a>
     </li>
+</ul> -->
+
+<ul>
+  @for(product of data; track product.id){
+      <li>
+          <h3>{{ product.title }}</h3>
+          <p>{{ product.description }}</p>
+          <!-- <a [routerLink] = "'/products/' + product.id" routerLinkActive="active" aria-current="page">View</a> -->
+          <a [routerLink]="['/products', product.id]">view</a>
+      </li>
+  }
 </ul>
